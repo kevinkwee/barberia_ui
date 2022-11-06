@@ -22,6 +22,8 @@ class BarberiaColors {
   static const neonBlue500 = Color(0xFF5C5CFF);
   static const maximumYellowRed500 = Color(0xFFFFC95C);
 
+  static const transparent = Colors.transparent;
+
   static const primary = neutral0;
   static const background = neutral1000;
   static const surface = neutral800;

@@ -45,10 +45,13 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
+  SizedBox get _verticalSpace => const SizedBox(height: 8);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -73,6 +76,64 @@ class MyHomePage extends StatelessWidget {
                 BarberiaText.highlightSmall('Highlight Small'), 'Bold - 14'),
             _buildTextRow(BarberiaText.body('Body'), 'Regular - 14'),
             _buildTextRow(BarberiaText.caption('Caption'), 'Regular - 11'),
+            _verticalSpace,
+            const BarberiaButton(label: 'Primary'),
+            _verticalSpace,
+            const BarberiaButton(
+              label: 'Primary Disabled',
+              enabled: false,
+            ),
+            _verticalSpace,
+            const BarberiaButton(
+              label: 'Busy',
+              busy: true,
+            ),
+            _verticalSpace,
+            const BarberiaOutlinedButton(label: 'Outlined'),
+            _verticalSpace,
+            const BarberiaOutlinedButton(
+              label: 'Outlined Disabled',
+              enabled: false,
+            ),
+            _verticalSpace,
+            const BarberiaOutlinedButton(
+              label: 'Busy',
+              busy: true,
+            ),
+            _verticalSpace,
+            const BarberiaButton(
+              label: 'Primary',
+              variant: ButtonVariant.small,
+            ),
+            _verticalSpace,
+            const BarberiaButton(
+              label: 'Primary Disabled',
+              enabled: false,
+              variant: ButtonVariant.small,
+            ),
+            _verticalSpace,
+            const BarberiaButton(
+              label: 'Busy',
+              busy: true,
+              variant: ButtonVariant.small,
+            ),
+            _verticalSpace,
+            const BarberiaOutlinedButton(
+              label: 'Outlined',
+              variant: ButtonVariant.small,
+            ),
+            _verticalSpace,
+            const BarberiaOutlinedButton(
+              label: 'Outlined Disabled',
+              enabled: false,
+              variant: ButtonVariant.small,
+            ),
+            _verticalSpace,
+            const BarberiaOutlinedButton(
+              label: 'Busy',
+              busy: true,
+              variant: ButtonVariant.small,
+            ),
           ],
         ),
       ),
