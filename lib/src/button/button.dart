@@ -12,7 +12,10 @@ class BarberiaButton extends BarberiaBaseButton {
     super.busy = false,
     super.enabled = true,
     required super.label,
-  }) : super(splashColor: BarberiaColors.neutral200);
+  }) : super(
+          splashColor: BarberiaColors.neutral200,
+          dense: false,
+        );
 
   @override
   BorderSide resolveBorderSide() => BorderSide.none;

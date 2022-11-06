@@ -4,6 +4,7 @@ library barberia_ui;
 export 'src/button/button.dart';
 export 'src/button/button_variant.dart';
 export 'src/button/outlined_button.dart';
+export 'src/button/text_button.dart';
 
 // colors
 export 'src/colors.dart';

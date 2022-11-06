@@ -12,6 +12,7 @@ abstract class BarberiaBaseButton extends StatelessWidget {
     required this.splashColor,
     required this.busy,
     required this.enabled,
+    required this.dense,
   });
 
   final String label;
@@ -20,6 +21,7 @@ abstract class BarberiaBaseButton extends StatelessWidget {
   final Color splashColor;
   final bool busy;
   final bool enabled;
+  final bool dense;
 
   Widget _buildChild() {
     if (busy) {
@@ -65,7 +67,7 @@ abstract class BarberiaBaseButton extends StatelessWidget {
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       padding: EdgeInsets.all(variant.padding),
       constraints: BoxConstraints(
-        minWidth: double.infinity,
+        minWidth: dense ? 0 : double.infinity,
         minHeight: variant.height,
         maxHeight: variant.height,
       ),

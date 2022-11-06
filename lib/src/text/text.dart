@@ -4,6 +4,15 @@ import 'styles.dart';
 import 'emphasis.dart';
 
 class BarberiaText extends StatelessWidget {
+  const BarberiaText({
+    super.key,
+    required this.data,
+    required this.style,
+    required this.align,
+    required this.emphasis,
+    this.maxLines,
+  });
+
   /// As the largest text on the screen, display styles are reserved for short,
   /// important text or numerals. They work best on large screens.
   BarberiaText.display(
@@ -99,6 +108,21 @@ class BarberiaText extends StatelessWidget {
     this.align = TextAlign.left,
     this.maxLines,
   }) : style = captionStyle.copyWith(color: emphasis.color);
+
+  BarberiaText copyWith({
+    String? data,
+    TextStyle? style,
+    TextAlign? align,
+    Emphasis? emphasis,
+    int? maxLines,
+  }) =>
+      BarberiaText(
+        data: data ?? this.data,
+        style: style ?? this.style,
+        align: align ?? this.align,
+        emphasis: emphasis ?? this.emphasis,
+        maxLines: maxLines ?? this.maxLines,
+      );
 
   final String data;
   final TextStyle style;
