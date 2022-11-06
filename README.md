@@ -1,10 +1,6 @@
 # Barberia UI
 A flutter design system for mobile platforms used internally in Barberia applications.
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
 ## Getting started
 
 Requirements:
@@ -19,12 +15,8 @@ dependencies:
     ref: main
 ```
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
+## References
+ - [Material 3](https://m3.material.io/) by Google
+ - [Optimus](https://github.com/MewsSystems/mews-flutter/tree/master/optimus) by Mews
+ - [BoxUI](https://www.filledstacks.com/post/building-a-design-system-in-flutter/) tutorial by FilledStack
+ 

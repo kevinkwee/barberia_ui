@@ -1,6 +1,6 @@
 name: barberia_ui
 description: A flutter design system for mobile platforms used internally in Barberia applications.
-version: 0.0.1
+version: 0.1.0
 
 publish_to: 'none'
 
@@ -18,3 +18,12 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: packages/barberia_ui/fonts/OpenSans-Regular.ttf
+          weight: 400
+        - asset: packages/barberia_ui/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: packages/barberia_ui/fonts/OpenSans-Bold.ttf
+          weight: 700
