@@ -8,7 +8,7 @@ class BarberiaOutlinedButton extends BarberiaBaseButton {
   const BarberiaOutlinedButton({
     super.key,
     super.onPressed,
-    super.variant = ButtonVariant.normal,
+    super.variant = ButtonVariant.large,
     super.busy = false,
     super.enabled = true,
     required super.label,

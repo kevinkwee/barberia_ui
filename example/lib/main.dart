@@ -55,6 +55,28 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            BarberiaTextFormField(
+              hintText: 'Masukkan',
+              validator: (_) {
+                return null;
+              },
+              autovalidateMode: AutovalidateMode.always,
+              keyboardType: TextInputType.text,
+              onChanged: (_) {},
+              readOnly: false,
+            ),
+            _verticalSpace,
+            BarberiaTextFormField(
+              hintText: 'Kata sandi',
+              validator: (_) {
+                return null;
+              },
+              autovalidateMode: AutovalidateMode.always,
+              keyboardType: TextInputType.multiline,
+              onChanged: (_) {},
+              readOnly: false,
+              maxLines: 4,
+            ),
             _buildTextRow(BarberiaText.titleLarge('Text Styles'), 'OpenSans'),
             const Divider(
               thickness: 0.5,

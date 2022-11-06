@@ -8,7 +8,7 @@ class BarberiaTextButton extends BarberiaBaseButton {
   const BarberiaTextButton({
     super.key,
     super.onPressed,
-    super.variant = ButtonVariant.normal,
+    super.variant = ButtonVariant.large,
     super.enabled = true,
     super.dense = false,
     required super.label,

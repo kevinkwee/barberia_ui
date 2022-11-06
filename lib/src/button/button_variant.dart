@@ -2,11 +2,38 @@ import 'package:flutter/rendering.dart';
 
 import '../text/styles.dart';
 
-enum ButtonVariant { normal, small }
+enum ButtonVariant { large, medium, small }
 
-extension ButtonVariantToHeight on ButtonVariant {
-  double get height => this == ButtonVariant.normal ? 36 : 24;
-  double get padding => this == ButtonVariant.normal ? 8 : 4;
-  TextStyle get textStyle =>
-      this == ButtonVariant.normal ? bodyStyle : captionStyle;
+extension ButtonVariantX on ButtonVariant {
+  double get height {
+    switch (this) {
+      case ButtonVariant.large:
+        return 48;
+      case ButtonVariant.medium:
+        return 36;
+      default:
+        return 24;
+    }
+  }
+
+  double get padding {
+    switch (this) {
+      case ButtonVariant.large:
+        return 16;
+      case ButtonVariant.medium:
+        return 8;
+      default:
+        return 4;
+    }
+  }
+
+  TextStyle get textStyle {
+    switch (this) {
+      case ButtonVariant.large:
+      case ButtonVariant.medium:
+        return bodyStyle;
+      default:
+        return captionStyle;
+    }
+  }
 }
