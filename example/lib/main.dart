@@ -20,7 +20,60 @@ class MyApp extends StatelessWidget {
         backgroundColor: BarberiaColors.background,
         scaffoldBackgroundColor: BarberiaColors.background,
       ),
-      home: const MyHomePage(),
+      home: const ListPage(),
+    );
+  }
+}
+
+class ListPage extends StatelessWidget {
+  const ListPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(8),
+        children: List.generate(
+          10,
+          (index) => Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: BarberiaListTile(
+              onTap: () => print('$index tapped'),
+              padding: EdgeInsets.zero,
+              prefix: ClipRRect(
+                borderRadius: borderRadius.copyWith(
+                  topRight: Radius.zero,
+                  bottomRight: Radius.zero,
+                ),
+                child: Image.asset(
+                  'assets/images/barber.jpg',
+                  height: 94,
+                  width: 94,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              title: BarberiaText.titleMedium('Daftar $index'),
+              subtitle: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Icon(
+                  //   Icons.star,
+                  //   color: BarberiaColors.maximumYellowRed500,
+                  // ),
+                  BarberiaText.caption(
+                    'Ratingasdafdfsdfsfsdfsdf $index',
+                    emphasis: Emphasis.less,
+                  ),
+                ],
+              ),
+              suffix: Icon(
+                Icons.chevron_right,
+                color: BarberiaColors.neutral0,
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
