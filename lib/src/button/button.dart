@@ -27,6 +27,6 @@ class BarberiaButton extends BarberiaBaseButton {
 
   @override
   Color resolveContentColor() {
-    return enabled ? BarberiaColors.neutral1000 : BarberiaColors.neutral300;
+    return enabled ? BarberiaColors.onPrimary : BarberiaColors.neutral300;
   }
 }

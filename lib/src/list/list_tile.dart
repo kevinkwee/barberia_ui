@@ -38,7 +38,7 @@ class BarberiaListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: BarberiaColors.neutral800,
+      color: BarberiaColors.surface,
       borderRadius: borderRadius,
       child: Container(
         decoration: const BoxDecoration(
@@ -51,9 +51,9 @@ class BarberiaListTile extends StatelessWidget {
         clipBehavior: Clip.hardEdge,
         child: InkWell(
           onTap: onTap,
-          highlightColor: BarberiaColors.neutral700,
+          highlightColor: BarberiaColors.neutral700.withOpacity(0.5),
           hoverColor: BarberiaColors.neutral900.withOpacity(0.5),
-          splashColor: BarberiaColors.neutral600,
+          splashColor: BarberiaColors.neutral600.withOpacity(0.5),
           borderRadius: borderRadius,
           child: Padding(
             padding: padding,

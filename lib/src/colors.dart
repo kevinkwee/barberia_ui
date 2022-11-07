@@ -32,6 +32,10 @@ class BarberiaColors {
   static const info = neonBlue500;
   static const warning = maximumYellowRed500;
 
+  static const onPrimary = neutral1000;
+  static const onBackground = neutral1000;
+  static const onSurface = neutral0;
+
   static const defaultTextColor = neutral100;
   static const highlightTextColor = neutral0;
 

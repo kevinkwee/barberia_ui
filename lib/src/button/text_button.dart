@@ -11,11 +11,14 @@ class BarberiaTextButton extends BarberiaBaseButton {
     super.variant = ButtonVariant.large,
     super.enabled = true,
     super.dense = false,
+    this.color = BarberiaColors.neutral50,
     required super.label,
   }) : super(
           busy: false,
           splashColor: BarberiaColors.neutral900,
         );
+
+  final Color color;
 
   @override
   BorderSide resolveBorderSide() => BorderSide.none;
@@ -25,6 +28,6 @@ class BarberiaTextButton extends BarberiaBaseButton {
 
   @override
   Color resolveContentColor() {
-    return enabled ? BarberiaColors.neutral50 : BarberiaColors.neutral500;
+    return enabled ? color : BarberiaColors.neutral500;
   }
 }
