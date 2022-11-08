@@ -46,7 +46,7 @@ class BarberiaColors {
   static const disabled = neutral500;
 
   static const onPrimary = neutral1000;
-  static const onBackground = neutral1000;
+  static const onBackground = neutral0;
   static const onSurface = neutral0;
   static const onPositive = neutral1000;
   static const onNegative = neutral1000;
