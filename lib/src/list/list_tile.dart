@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../colors.dart';
 import '../constants.dart';
 
-class BarberiaListTile extends StatelessWidget {
-  const BarberiaListTile({
+class BListTile extends StatefulWidget {
+  const BListTile({
     super.key,
     required this.title,
     this.subtitle,
@@ -21,56 +21,59 @@ class BarberiaListTile extends StatelessWidget {
   final VoidCallback? onTap;
   final EdgeInsetsGeometry padding;
 
-  List<Widget> _buildPrefix() => prefix != null
-      ? [
-          prefix!,
-          const SizedBox(width: 8),
-        ]
-      : [];
+  @override
+  State<BListTile> createState() => _BListTileState();
+}
 
-  List<Widget> _buildSubtitle() => subtitle != null
-      ? [
-          const SizedBox(height: 2),
-          subtitle!,
-        ]
-      : [];
+class _BListTileState extends State<BListTile> {
+  double scale = 1;
+
+  void _shrinkScale() => setState(() => scale = 0.98);
+  void _restoreScale() => setState(() => scale = 1);
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: BarberiaColors.surface,
-      borderRadius: borderRadius,
-      child: Container(
-        decoration: const BoxDecoration(
-          border: Border.fromBorderSide(BorderSide.none),
-          borderRadius: borderRadius,
-        ),
-        constraints: const BoxConstraints(
-          minHeight: 48,
-        ),
-        clipBehavior: Clip.hardEdge,
-        child: InkWell(
-          onTap: onTap,
-          highlightColor: BarberiaColors.neutral700.withOpacity(0.5),
-          hoverColor: BarberiaColors.neutral900.withOpacity(0.5),
-          splashColor: BarberiaColors.neutral600.withOpacity(0.5),
-          borderRadius: borderRadius,
-          child: Padding(
-            padding: padding,
-            child: Row(
-              children: [
-                ..._buildPrefix(),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      title,
-                      ..._buildSubtitle(),
-                    ],
+    return AnimatedScale(
+      duration: const Duration(milliseconds: 100),
+      scale: scale,
+      child: Material(
+        color: BarberiaColors.transparent,
+        borderRadius: borderRadius,
+        child: Container(
+          decoration: const BoxDecoration(
+            border: Border.fromBorderSide(BorderSide.none),
+            borderRadius: borderRadius,
+          ),
+          constraints: const BoxConstraints(
+            minHeight: 48,
+          ),
+          clipBehavior: Clip.hardEdge,
+          child: InkWell(
+            onTap: () => widget.onTap,
+            onTapDown: (_) => _shrinkScale(),
+            onTapUp: (_) => _restoreScale(),
+            onTapCancel: () => _restoreScale(),
+            highlightColor: BarberiaColors.neutral700.withOpacity(0.5),
+            hoverColor: BarberiaColors.neutral900.withOpacity(0.5),
+            splashColor: BarberiaColors.neutral600.withOpacity(0.5),
+            borderRadius: borderRadius,
+            child: Padding(
+              padding: widget.padding,
+              child: Row(
+                children: [
+                  if (widget.prefix != null) widget.prefix!,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        widget.title,
+                        if (widget.subtitle != null) widget.subtitle!,
+                      ],
+                    ),
                   ),
-                ),
-                if (suffix != null) suffix!,
-              ],
+                  if (widget.suffix != null) widget.suffix!,
+                ],
+              ),
             ),
           ),
         ),

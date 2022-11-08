@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'emphasis.dart';
 
-class BarberiaText extends StatelessWidget {
-  const BarberiaText({
+class BText extends StatelessWidget {
+  const BText({
     super.key,
     required this.data,
     required this.style,
@@ -15,7 +15,7 @@ class BarberiaText extends StatelessWidget {
 
   /// As the largest text on the screen, display styles are reserved for short,
   /// important text or numerals. They work best on large screens.
-  BarberiaText.display(
+  BText.display(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -27,7 +27,7 @@ class BarberiaText extends StatelessWidget {
   /// on smaller screens.
   /// These styles can be good for marking primary passages of text or
   /// important regions of content.
-  BarberiaText.highlightLarge(
+  BText.highlightLarge(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -39,7 +39,7 @@ class BarberiaText extends StatelessWidget {
   /// on smaller screens.
   /// These styles can be good for marking primary passages of text or
   /// important regions of content.
-  BarberiaText.highlightMedium(
+  BText.highlightMedium(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -51,7 +51,7 @@ class BarberiaText extends StatelessWidget {
   /// on smaller screens.
   /// These styles can be good for marking primary passages of text or
   /// important regions of content.
-  BarberiaText.highlightSmall(
+  BText.highlightSmall(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -61,7 +61,7 @@ class BarberiaText extends StatelessWidget {
 
   /// Titles are smaller than headline styles, and should be used for
   /// medium-emphasis text that remains relatively short.
-  BarberiaText.titleLarge(
+  BText.titleLarge(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -71,7 +71,7 @@ class BarberiaText extends StatelessWidget {
 
   /// Titles are smaller than headline styles, and should be used for
   /// medium-emphasis text that remains relatively short.
-  BarberiaText.titleMedium(
+  BText.titleMedium(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -81,7 +81,7 @@ class BarberiaText extends StatelessWidget {
 
   /// Titles are smaller than headline styles, and should be used for
   /// medium-emphasis text that remains relatively short.
-  BarberiaText.titleSmall(
+  BText.titleSmall(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -90,7 +90,7 @@ class BarberiaText extends StatelessWidget {
   }) : style = titleSmallStyle;
 
   /// Body styles are used for longer passages of text.
-  BarberiaText.body(
+  BText.body(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -101,7 +101,7 @@ class BarberiaText extends StatelessWidget {
   /// Caption styles are smaller, utilitarian styles,
   /// used for things like the text inside components or for very small text in
   /// the content body.
-  BarberiaText.caption(
+  BText.caption(
     this.data, {
     super.key,
     this.emphasis = Emphasis.normal,
@@ -109,14 +109,14 @@ class BarberiaText extends StatelessWidget {
     this.maxLines,
   }) : style = captionStyle.copyWith(color: emphasis.color);
 
-  BarberiaText copyWith({
+  BText copyWith({
     String? data,
     TextStyle? style,
     TextAlign? align,
     Emphasis? emphasis,
     int? maxLines,
   }) =>
-      BarberiaText(
+      BText(
         data: data ?? this.data,
         style: style ?? this.style,
         align: align ?? this.align,
