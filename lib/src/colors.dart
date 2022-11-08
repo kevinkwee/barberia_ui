@@ -17,10 +17,22 @@ class BarberiaColors {
   static const neutral900 = Color.fromARGB(255, 26, 26, 26);
   static const neutral1000 = Color.fromARGB(255, 0, 0, 0);
 
-  static const orangeRedCrayola500 = Color(0xFFFF5E5E);
-  static const screaminGreen500 = Color(0xFF5CFF5C);
-  static const neonBlue500 = Color(0xFF5C5CFF);
-  static const maximumYellowRed500 = Color(0xFFFFC95C);
+  static const neutral1000t8 = Color.fromARGB(8, 0, 0, 0);
+  static const neutral1000t16 = Color.fromARGB(16, 0, 0, 0);
+  static const neutral1000t32 = Color.fromARGB(32, 0, 0, 0);
+  static const neutral1000t64 = Color.fromARGB(64, 0, 0, 0);
+  static const neutral1000t128 = Color.fromARGB(128, 0, 0, 0);
+
+  static const neutral0t8 = Color.fromARGB(8, 255, 255, 255);
+  static const neutral0t16 = Color.fromARGB(16, 255, 255, 255);
+  static const neutral0t32 = Color.fromARGB(32, 255, 255, 255);
+  static const neutral0t64 = Color.fromARGB(64, 255, 255, 255);
+  static const neutral0t128 = Color.fromARGB(128, 255, 255, 255);
+
+  static const orangeRedCrayola500 = Color.fromARGB(255, 255, 94, 94);
+  static const screaminGreen500 = Color.fromARGB(255, 92, 255, 92);
+  static const neonBlue500 = Color.fromARGB(255, 92, 92, 255);
+  static const maximumYellowRed500 = Color.fromARGB(255, 255, 201, 92);
 
   static const transparent = Colors.transparent;
 
@@ -31,10 +43,16 @@ class BarberiaColors {
   static const negative = orangeRedCrayola500;
   static const info = neonBlue500;
   static const warning = maximumYellowRed500;
+  static const disabled = neutral500;
 
   static const onPrimary = neutral1000;
   static const onBackground = neutral1000;
   static const onSurface = neutral0;
+  static const onPositive = neutral1000;
+  static const onNegative = neutral1000;
+  static const onWarning = neutral1000;
+  static const onInfo = neutral0;
+  static const onDisabled = neutral400;
 
   static const defaultTextColor = neutral100;
   static const highlightTextColor = neutral0;

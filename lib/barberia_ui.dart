@@ -7,8 +7,7 @@ import 'package:flutter/material.dart';
 // button
 export 'src/button/button.dart';
 export 'src/button/button_variant.dart';
-export 'src/button/outlined_button.dart';
-export 'src/button/text_button.dart';
+export 'src/button/icon_button.dart';
 
 // form
 export 'src/form/text_form_field.dart';
@@ -25,6 +24,7 @@ export 'src/text/text.dart';
 export 'src/card.dart';
 export 'src/colors.dart';
 export 'src/constants.dart';
+export 'src/widget_size.dart';
 
 ThemeData createBarberiaMaterialTheme() => ThemeData(
       brightness: Brightness.dark,

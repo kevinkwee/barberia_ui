@@ -1,32 +1,58 @@
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../constants.dart';
+import '../widget_size.dart';
 import 'base_button.dart';
 import 'button_variant.dart';
 
-class BarberiaButton extends BarberiaBaseButton {
-  const BarberiaButton({
+class BButton extends BBaseButton {
+  const BButton({
     super.key,
+    required this.label,
+    this.icon,
     super.onPressed,
-    super.variant = ButtonVariant.large,
+    this.dense = false,
     super.busy = false,
     super.enabled = true,
-    required super.label,
-  }) : super(
-          splashColor: BarberiaColors.neutral200,
-          dense: false,
-        );
+    super.size = BWidgetSize.large,
+    super.variant = BButtonVariant.primary,
+  });
+
+  final String label;
+  final bool dense;
+  final IconData? icon;
 
   @override
-  BorderSide resolveBorderSide() => BorderSide.none;
-
-  @override
-  Color resolveButtonColor() {
-    return enabled ? BarberiaColors.primary : BarberiaColors.neutral500;
+  Widget buildChild(contentColorResolver, textStyleResolver, iconSizeResolver) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (icon != null) ...[
+          Icon(
+            icon,
+            size: iconSizeResolver(),
+            color: contentColorResolver(),
+          ),
+          const SizedBox(width: 4),
+        ],
+        Text(
+          label,
+          textAlign: TextAlign.center,
+          style: textStyleResolver(),
+        ),
+      ],
+    );
   }
 
   @override
-  Color resolveContentColor() {
-    return enabled ? BarberiaColors.onPrimary : BarberiaColors.neutral300;
+  BorderRadiusGeometry resolveBorderRadius() => borderRadius;
+
+  @override
+  BoxConstraints resolveConstraints() {
+    return BoxConstraints(
+      minWidth: dense ? 0 : double.infinity,
+      minHeight: size.value,
+      maxHeight: size.value,
+    );
   }
 }
