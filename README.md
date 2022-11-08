@@ -11,8 +11,9 @@ Add ```barberia_ui``` as a dependency in your pubspec.yaml file.
 ```yaml
 dependencies:
   barberia_ui:
-    git: https://github.com/kevinkwee/barberia_ui.git
-    ref: main
+    git:
+      url: https://github.com/kevinkwee/barberia_ui.git
+      ref: main
 ```
 
 ## References
