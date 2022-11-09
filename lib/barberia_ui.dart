@@ -1,5 +1,8 @@
 library barberia_ui;
 
+// app bar
+export 'src/app_bar/app_bar.dart';
+
 // button
 export 'src/button/button.dart';
 export 'src/button/button_variant.dart';
@@ -15,8 +18,10 @@ export 'src/list/list_tile.dart';
 export 'src/text/emphasis.dart';
 export 'src/text/text.dart';
 
+// card
+export 'src/card/card.dart';
+
 // shared
-export 'src/card.dart';
 export 'src/colors.dart';
 export 'src/constants.dart';
 export 'src/widget_size.dart';

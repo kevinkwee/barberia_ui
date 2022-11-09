@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
-import 'constants.dart';
+import '../colors.dart';
+import '../constants.dart';
 
 class BarberiaCard extends StatelessWidget {
   const BarberiaCard({super.key, required this.child});
