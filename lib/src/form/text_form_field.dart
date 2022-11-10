@@ -28,6 +28,7 @@ class BTextFormField extends StatelessWidget {
     this.size = BWidgetSize.large,
     this.validator,
     required this.onChanged,
+    this.onFieldSubmitted,
   });
 
   final String? hintText;
@@ -38,13 +39,14 @@ class BTextFormField extends StatelessWidget {
   final Widget? suffix;
   final Widget? suffixIcon;
   final int maxLines;
-  final String? Function(String?)? validator;
   final TextEditingController? controller;
   final AutovalidateMode? autovalidateMode;
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
   final TextInputAction? textInputAction;
+  final String? Function(String?)? validator;
   final ValueChanged<String> onChanged;
+  final ValueChanged<String>? onFieldSubmitted;
   final bool readOnly;
   final bool obscureText;
   final bool filled;
@@ -161,6 +163,7 @@ class BTextFormField extends StatelessWidget {
         ),
         validator: validator,
         onChanged: onChanged,
+        onFieldSubmitted: onFieldSubmitted,
       ),
     );
   }
