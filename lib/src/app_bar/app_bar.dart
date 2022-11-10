@@ -31,7 +31,7 @@ class BAppBar extends AppBar {
           ),
         ),
         title: BText.titleSmall(
-          'Masuk',
+          title,
           align: TextAlign.center,
         ),
       );
