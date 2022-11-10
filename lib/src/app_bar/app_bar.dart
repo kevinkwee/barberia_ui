@@ -20,14 +20,11 @@ class BAppBar extends AppBar {
           elevation: 0,
         );
 
-  factory BAppBar.defaultWithBackButton({
-    required String title,
-    required VoidCallback popHandler,
-  }) =>
+  factory BAppBar.defaultWithBackButton(BuildContext context, String title) =>
       BAppBar(
         leading: Center(
           child: BIconButton.circle(
-            onPressed: popHandler,
+            onPressed: () => Navigator.of(context).pop(),
             variant: BButtonVariant.bare,
             size: BWidgetSize.small,
             child: const Icon(Icons.arrow_back_ios_new),
