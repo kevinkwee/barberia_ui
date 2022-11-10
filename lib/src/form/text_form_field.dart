@@ -19,6 +19,7 @@ class BTextFormField extends StatelessWidget {
     this.maxLines = 1,
     this.controller,
     this.textCapitalization = TextCapitalization.none,
+    this.textInputAction,
     this.autovalidateMode,
     this.keyboardType,
     this.readOnly = false,
@@ -42,6 +43,7 @@ class BTextFormField extends StatelessWidget {
   final AutovalidateMode? autovalidateMode;
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
+  final TextInputAction? textInputAction;
   final ValueChanged<String> onChanged;
   final bool readOnly;
   final bool obscureText;
@@ -104,6 +106,7 @@ class BTextFormField extends StatelessWidget {
         autovalidateMode: autovalidateMode,
         controller: controller,
         textCapitalization: textCapitalization,
+        textInputAction: textInputAction,
         keyboardType: keyboardType,
         maxLines: maxLines,
         readOnly: readOnly,

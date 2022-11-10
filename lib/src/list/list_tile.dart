@@ -34,7 +34,7 @@ class _BListTileState extends State<BListTile> {
   @override
   Widget build(BuildContext context) {
     return AnimatedScale(
-      duration: const Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 300),
       scale: scale,
       child: Material(
         color: BarberiaColors.transparent,
@@ -49,7 +49,7 @@ class _BListTileState extends State<BListTile> {
           ),
           clipBehavior: Clip.hardEdge,
           child: InkWell(
-            onTap: () => widget.onTap,
+            onTap: widget.onTap,
             onTapDown: (_) => _shrinkScale(),
             onTapUp: (_) => _restoreScale(),
             onTapCancel: () => _restoreScale(),
