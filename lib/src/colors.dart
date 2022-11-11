@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BarberiaColors {
-  const BarberiaColors._();
+class BColors {
+  const BColors._();
 
   static const neutral0 = Color.fromARGB(255, 255, 255, 255);
   static const neutral25 = Color.fromARGB(255, 249, 249, 249);

@@ -37,7 +37,7 @@ class _BListTileState extends State<BListTile> {
       duration: const Duration(milliseconds: 300),
       scale: scale,
       child: Material(
-        color: BarberiaColors.transparent,
+        color: BColors.transparent,
         borderRadius: borderRadius,
         child: Container(
           decoration: const BoxDecoration(
@@ -53,9 +53,9 @@ class _BListTileState extends State<BListTile> {
             onTapDown: (_) => _shrinkScale(),
             onTapUp: (_) => _restoreScale(),
             onTapCancel: () => _restoreScale(),
-            highlightColor: BarberiaColors.neutral700.withOpacity(0.5),
-            hoverColor: BarberiaColors.neutral900.withOpacity(0.5),
-            splashColor: BarberiaColors.neutral600.withOpacity(0.5),
+            highlightColor: BColors.neutral700.withOpacity(0.5),
+            hoverColor: BColors.neutral900.withOpacity(0.5),
+            splashColor: BColors.neutral600.withOpacity(0.5),
             borderRadius: borderRadius,
             child: Padding(
               padding: widget.padding,

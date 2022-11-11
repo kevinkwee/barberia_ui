@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../colors.dart';
 import '../constants.dart';
 
-class BarberiaCard extends StatelessWidget {
-  const BarberiaCard({super.key, required this.child});
+class BCard extends StatelessWidget {
+  const BCard({super.key, required this.child});
 
   final Widget child;
 
@@ -12,7 +12,7 @@ class BarberiaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: BarberiaColors.surface,
+      color: BColors.surface,
       shape: const RoundedRectangleBorder(borderRadius: borderRadius),
       clipBehavior: Clip.antiAlias,
       child: child,

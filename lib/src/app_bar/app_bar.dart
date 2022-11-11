@@ -10,12 +10,13 @@ class BAppBar extends AppBar {
   BAppBar({
     super.key,
     super.leading,
+    super.leadingWidth,
     super.title,
     super.actions,
   }) : super(
           automaticallyImplyLeading: false,
-          backgroundColor: BarberiaColors.background,
-          foregroundColor: BarberiaColors.onBackground,
+          backgroundColor: BColors.background,
+          foregroundColor: BColors.onBackground,
           centerTitle: true,
           elevation: 0,
         );

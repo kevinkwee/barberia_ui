@@ -29,19 +29,19 @@ abstract class BBaseButton extends StatelessWidget {
     if (enabled) {
       switch (variant) {
         case BButtonVariant.primary:
-          return BarberiaColors.primary;
+          return BColors.primary;
         case BButtonVariant.outlined:
-          return BarberiaColors.transparent;
+          return BColors.transparent;
         case BButtonVariant.bare:
-          return BarberiaColors.transparent;
+          return BColors.transparent;
         case BButtonVariant.bareAlt:
-          return BarberiaColors.transparent;
+          return BColors.transparent;
         case BButtonVariant.positive:
-          return BarberiaColors.positive;
+          return BColors.positive;
         case BButtonVariant.negative:
-          return BarberiaColors.negative;
+          return BColors.negative;
         case BButtonVariant.warning:
-          return BarberiaColors.warning;
+          return BColors.warning;
       }
     }
 
@@ -50,11 +50,11 @@ abstract class BBaseButton extends StatelessWidget {
       case BButtonVariant.positive:
       case BButtonVariant.negative:
       case BButtonVariant.warning:
-        return BarberiaColors.disabled;
+        return BColors.disabled;
       case BButtonVariant.outlined:
       case BButtonVariant.bare:
       case BButtonVariant.bareAlt:
-        return BarberiaColors.transparent;
+        return BColors.transparent;
     }
   }
 
@@ -64,11 +64,11 @@ abstract class BBaseButton extends StatelessWidget {
       case BButtonVariant.positive:
       case BButtonVariant.negative:
       case BButtonVariant.warning:
-        return BarberiaColors.neutral1000t64;
+        return BColors.neutral1000t64;
       case BButtonVariant.outlined:
       case BButtonVariant.bare:
       case BButtonVariant.bareAlt:
-        return BarberiaColors.neutral0t64;
+        return BColors.neutral0t64;
     }
   }
 
@@ -95,19 +95,19 @@ abstract class BBaseButton extends StatelessWidget {
     if (enabled) {
       switch (variant) {
         case BButtonVariant.primary:
-          return BarberiaColors.onPrimary;
+          return BColors.onPrimary;
         case BButtonVariant.outlined:
-          return BarberiaColors.primary;
+          return BColors.primary;
         case BButtonVariant.bare:
-          return BarberiaColors.primary;
+          return BColors.primary;
         case BButtonVariant.bareAlt:
-          return BarberiaColors.info;
+          return BColors.info;
         case BButtonVariant.positive:
-          return BarberiaColors.onPositive;
+          return BColors.onPositive;
         case BButtonVariant.negative:
-          return BarberiaColors.onNegative;
+          return BColors.onNegative;
         case BButtonVariant.warning:
-          return BarberiaColors.onWarning;
+          return BColors.onWarning;
       }
     }
 
@@ -116,11 +116,11 @@ abstract class BBaseButton extends StatelessWidget {
       case BButtonVariant.positive:
       case BButtonVariant.negative:
       case BButtonVariant.warning:
-        return BarberiaColors.onDisabled;
+        return BColors.onDisabled;
       case BButtonVariant.outlined:
       case BButtonVariant.bare:
       case BButtonVariant.bareAlt:
-        return BarberiaColors.disabled;
+        return BColors.disabled;
     }
   }
 

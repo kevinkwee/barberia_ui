@@ -56,43 +56,49 @@ class BTextFormField extends StatelessWidget {
     final style = size == BWidgetSize.mini ? captionStyle : bodyStyle;
 
     if (filled) {
-      return style.copyWith(color: BarberiaColors.onPrimary);
+      return style.copyWith(color: BColors.onPrimary);
     }
 
     return style;
   }
 
-  BorderSide get enabledBorder => filled
-      ? BorderSide.none
-      : const BorderSide(color: BarberiaColors.neutral200);
+  TextStyle get hintStyle {
+    final style = size == BWidgetSize.mini ? captionStyle : bodyStyle;
+
+    return style.copyWith(
+      color: BColors.neutral500,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  BorderSide get enabledBorder =>
+      filled ? BorderSide.none : const BorderSide(color: BColors.neutral200);
 
   BorderSide get focusedBorder => filled
       ? BorderSide.none
       : const BorderSide(
-          color: BarberiaColors.neutral100,
+          color: BColors.neutral100,
           width: 2,
         );
 
   BorderSide get errorBorder => filled
       ? BorderSide.none
-      : const BorderSide(color: BarberiaColors.orangeRedCrayola500);
+      : const BorderSide(color: BColors.orangeRedCrayola500);
 
   BorderSide get focusedErrorBorder => filled
       ? BorderSide.none
       : const BorderSide(
-          color: BarberiaColors.orangeRedCrayola500,
+          color: BColors.orangeRedCrayola500,
           width: 2,
         );
 
-  BorderSide get disabledBorder => filled
-      ? BorderSide.none
-      : const BorderSide(color: BarberiaColors.neutral400);
+  BorderSide get disabledBorder =>
+      filled ? BorderSide.none : const BorderSide(color: BColors.neutral400);
 
-  Color get cursorColor =>
-      filled ? BarberiaColors.neutral500 : BarberiaColors.neutral200;
+  Color get cursorColor => filled ? BColors.neutral500 : BColors.neutral200;
 
   Color get selectionColor =>
-      filled ? BarberiaColors.neutral1000t64 : BarberiaColors.neutral0t64;
+      filled ? BColors.neutral1000t64 : BColors.neutral0t64;
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +107,7 @@ class BTextFormField extends StatelessWidget {
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: cursorColor,
           selectionColor: selectionColor,
-          selectionHandleColor: BarberiaColors.info,
+          selectionHandleColor: BColors.info,
         ),
       ),
       child: TextFormField(
@@ -116,10 +122,7 @@ class BTextFormField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: bodyStyle.copyWith(
-            color: BarberiaColors.neutral500,
-            fontWeight: FontWeight.w600,
-          ),
+          hintStyle: hintStyle,
           prefixText: prefixText,
           prefixStyle: textStyle,
           prefixIcon: prefixIcon,
@@ -131,14 +134,15 @@ class BTextFormField extends StatelessWidget {
           suffixIcon: suffixIcon,
           suffixIconConstraints: const BoxConstraints(),
           filled: filled,
-          fillColor: BarberiaColors.onBackground,
+          fillColor: BColors.onBackground,
           errorStyle: captionStyle.copyWith(
-            color: BarberiaColors.negative,
+            color: BColors.negative,
             fontWeight: FontWeight.w700,
           ),
           contentPadding: const EdgeInsets.symmetric(horizontal: 12),
           constraints: BoxConstraints(
             minHeight: size.value,
+            maxHeight: maxLines == 1 ? size.value : double.infinity,
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: enabledBorder,
