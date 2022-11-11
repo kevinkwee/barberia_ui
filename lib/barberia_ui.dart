@@ -16,6 +16,7 @@ export 'src/list/list_tile.dart';
 
 // text
 export 'src/text/emphasis.dart';
+export 'src/text/styles.dart';
 export 'src/text/text.dart';
 
 // card
