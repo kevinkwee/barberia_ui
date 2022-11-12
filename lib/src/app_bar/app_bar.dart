@@ -14,8 +14,8 @@ class BAppBar extends AppBar {
     super.title,
     super.actions,
     super.centerTitle = true,
+    super.automaticallyImplyLeading = true,
   }) : super(
-          automaticallyImplyLeading: false,
           backgroundColor: BColors.background,
           foregroundColor: BColors.onBackground,
           elevation: 0,
