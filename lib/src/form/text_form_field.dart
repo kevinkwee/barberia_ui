@@ -25,6 +25,7 @@ class BTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.obscureText = false,
     this.filled = false,
+    this.enabled = true,
     this.size = BWidgetSize.large,
     this.validator,
     required this.onChanged,
@@ -50,6 +51,7 @@ class BTextFormField extends StatelessWidget {
   final bool readOnly;
   final bool obscureText;
   final bool filled;
+  final bool enabled;
   final BWidgetSize size;
 
   TextStyle get textStyle {
@@ -111,6 +113,7 @@ class BTextFormField extends StatelessWidget {
         ),
       ),
       child: TextFormField(
+        enabled: enabled,
         autovalidateMode: autovalidateMode,
         controller: controller,
         textCapitalization: textCapitalization,

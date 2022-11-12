@@ -13,11 +13,11 @@ class BAppBar extends AppBar {
     super.leadingWidth,
     super.title,
     super.actions,
+    super.centerTitle = true,
   }) : super(
           automaticallyImplyLeading: false,
           backgroundColor: BColors.background,
           foregroundColor: BColors.onBackground,
-          centerTitle: true,
           elevation: 0,
         );
 
