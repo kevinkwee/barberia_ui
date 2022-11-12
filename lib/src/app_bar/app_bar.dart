@@ -14,8 +14,10 @@ class BAppBar extends AppBar {
     super.toolbarHeight,
     super.title,
     super.titleSpacing,
-    super.actions,
     super.centerTitle = true,
+    super.actions,
+    super.bottom,
+    super.bottomOpacity,
     super.automaticallyImplyLeading = true,
   }) : super(
           backgroundColor: BColors.background,
