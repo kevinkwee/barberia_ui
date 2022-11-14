@@ -185,6 +185,9 @@ abstract class BBaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       elevation: 0,
+      focusElevation: 0,
+      hoverElevation: 0,
+      highlightElevation: 0,
       onPressed: _resolveOnPressed(),
       fillColor: _resolveButtonColor(),
       splashColor: _resolveSplashColor(),
