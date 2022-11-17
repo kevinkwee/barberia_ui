@@ -14,6 +14,7 @@ class BIconButton extends BBaseButton {
     super.enabled = true,
     super.size = BWidgetSize.large,
     super.variant = BButtonVariant.primary,
+    super.elevation = 0,
   }) : borderRadius = k.borderRadius;
 
   BIconButton.circle({
@@ -24,6 +25,7 @@ class BIconButton extends BBaseButton {
     super.enabled = true,
     super.size = BWidgetSize.large,
     super.variant = BButtonVariant.primary,
+    super.elevation = 0,
   }) : borderRadius = BorderRadius.all(Radius.circular(size.value / 2));
 
   /// Typically [Icon] widget.

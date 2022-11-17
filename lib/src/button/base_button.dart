@@ -13,6 +13,7 @@ abstract class BBaseButton extends StatelessWidget {
     required this.enabled,
     required this.size,
     required this.variant,
+    required this.elevation,
   });
 
   final VoidCallback? onPressed;
@@ -20,6 +21,7 @@ abstract class BBaseButton extends StatelessWidget {
   final BWidgetSize size;
   final bool busy;
   final bool enabled;
+  final double elevation;
 
   VoidCallback? _resolveOnPressed() {
     return enabled && !busy ? onPressed : null;
@@ -184,10 +186,10 @@ abstract class BBaseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      elevation: 0,
-      focusElevation: 0,
-      hoverElevation: 0,
-      highlightElevation: 0,
+      elevation: elevation,
+      focusElevation: elevation > 0 ? elevation + 2 : 0,
+      hoverElevation: elevation > 0 ? elevation + 2 : 0,
+      highlightElevation: elevation > 0 ? elevation + 6 : 0,
       onPressed: _resolveOnPressed(),
       fillColor: _resolveButtonColor(),
       splashColor: _resolveSplashColor(),

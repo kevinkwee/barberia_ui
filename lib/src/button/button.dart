@@ -16,6 +16,7 @@ class BButton extends BBaseButton {
     super.enabled = true,
     super.size = BWidgetSize.large,
     super.variant = BButtonVariant.primary,
+    super.elevation = 0,
   });
 
   final String label;
