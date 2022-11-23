@@ -12,6 +12,7 @@ class BListTile extends StatefulWidget {
     this.suffix,
     this.onTap,
     this.padding = const EdgeInsets.all(8),
+    this.crossAxisAlignment = CrossAxisAlignment.center,
   });
 
   final Widget title;
@@ -20,6 +21,7 @@ class BListTile extends StatefulWidget {
   final Widget? suffix;
   final VoidCallback? onTap;
   final EdgeInsetsGeometry padding;
+  final CrossAxisAlignment crossAxisAlignment;
 
   @override
   State<BListTile> createState() => _BListTileState();
@@ -60,6 +62,7 @@ class _BListTileState extends State<BListTile> {
             child: Padding(
               padding: widget.padding,
               child: Row(
+                crossAxisAlignment: widget.crossAxisAlignment,
                 children: [
                   if (widget.prefix != null) widget.prefix!,
                   Expanded(

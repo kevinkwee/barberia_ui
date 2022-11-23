@@ -4,12 +4,12 @@ import 'styles.dart';
 import 'emphasis.dart';
 
 class BText extends StatelessWidget {
-  const BText({
+  const BText(
+    this.data, {
     super.key,
-    required this.data,
     required this.style,
-    required this.align,
-    required this.emphasis,
+    this.align = TextAlign.left,
+    this.emphasis = Emphasis.normal,
     this.maxLines,
   });
 
@@ -117,7 +117,7 @@ class BText extends StatelessWidget {
     int? maxLines,
   }) =>
       BText(
-        data: data ?? this.data,
+        data ?? this.data,
         style: style ?? this.style,
         align: align ?? this.align,
         emphasis: emphasis ?? this.emphasis,
