@@ -1,6 +1,6 @@
 name: barberia_ui
 description: A flutter design system for mobile platforms used internally in Barberia applications.
-version: 0.10.15
+version: 0.10.16
 
 publish_to: 'none'
 

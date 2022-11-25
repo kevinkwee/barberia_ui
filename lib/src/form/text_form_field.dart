@@ -129,13 +129,13 @@ class BTextFormField extends StatelessWidget {
           prefixText: prefixText,
           prefixStyle: textStyle,
           prefixIcon: prefixIcon,
-          prefixIconConstraints: const BoxConstraints(),
+          prefixIconConstraints: BoxConstraints(maxHeight: size.value),
           prefix: prefix,
           suffixText: suffixText,
           suffixStyle: textStyle,
           suffix: suffix,
           suffixIcon: suffixIcon,
-          suffixIconConstraints: const BoxConstraints(),
+          suffixIconConstraints: BoxConstraints(maxHeight: size.value),
           filled: filled,
           fillColor: BColors.onBackground,
           errorStyle: captionStyle.copyWith(
@@ -145,7 +145,7 @@ class BTextFormField extends StatelessWidget {
           contentPadding: const EdgeInsets.symmetric(horizontal: 12),
           constraints: BoxConstraints(
             minHeight: size.value,
-            maxHeight: maxLines == 1 ? size.value : double.infinity,
+            // maxHeight: maxLines == 1 ? size.value : double.infinity,
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: enabledBorder,
