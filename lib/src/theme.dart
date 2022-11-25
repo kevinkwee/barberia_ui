@@ -9,6 +9,10 @@ ThemeData createBarberiaMaterialTheme() => ThemeData(
       backgroundColor: BColors.background,
       scaffoldBackgroundColor: BColors.background,
       fontFamily: 'packages/barberia_ui/OpenSans',
+      bottomSheetTheme: const BottomSheetThemeData(
+        elevation: 0,
+        backgroundColor: BColors.transparent,
+      ),
       colorScheme: const ColorScheme.dark(
         primary: BColors.primary,
         onPrimary: BColors.onPrimary,
