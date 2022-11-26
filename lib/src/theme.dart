@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
+import 'text/styles.dart';
 
 ThemeData createBarberiaMaterialTheme() => ThemeData(
       brightness: Brightness.dark,
@@ -9,6 +10,36 @@ ThemeData createBarberiaMaterialTheme() => ThemeData(
       backgroundColor: BColors.background,
       scaffoldBackgroundColor: BColors.background,
       fontFamily: 'packages/barberia_ui/OpenSans',
+      textTheme: TextTheme(
+        displayLarge: baseTextStyle,
+        displayMedium: baseTextStyle,
+        displaySmall: baseTextStyle,
+        headlineLarge: baseTextStyle,
+        headlineMedium: baseTextStyle,
+        headlineSmall: baseTextStyle,
+        titleLarge: baseTextStyle,
+        titleMedium: baseTextStyle,
+        titleSmall: baseTextStyle,
+        bodyLarge: baseTextStyle,
+        bodyMedium: baseTextStyle,
+        bodySmall: baseTextStyle,
+        labelLarge: baseTextStyle,
+        labelMedium: baseTextStyle,
+        labelSmall: baseTextStyle,
+        headline1: baseTextStyle,
+        headline2: baseTextStyle,
+        headline3: baseTextStyle,
+        headline4: baseTextStyle,
+        headline5: baseTextStyle,
+        headline6: baseTextStyle,
+        subtitle1: baseTextStyle,
+        subtitle2: baseTextStyle,
+        bodyText1: baseTextStyle,
+        bodyText2: baseTextStyle,
+        caption: baseTextStyle,
+        button: baseTextStyle,
+        overline: baseTextStyle,
+      ),
       bottomSheetTheme: const BottomSheetThemeData(
         elevation: 0,
         backgroundColor: BColors.transparent,
