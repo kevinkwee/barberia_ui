@@ -22,6 +22,7 @@ class BTextFormField extends StatelessWidget {
     this.textInputAction,
     this.autovalidateMode,
     this.keyboardType,
+    this.textAlign = TextAlign.start,
     this.readOnly = false,
     this.obscureText = false,
     this.filled = false,
@@ -39,6 +40,7 @@ class BTextFormField extends StatelessWidget {
   final String? suffixText;
   final Widget? suffix;
   final Widget? suffixIcon;
+  final TextAlign textAlign;
   final int maxLines;
   final TextEditingController? controller;
   final AutovalidateMode? autovalidateMode;
@@ -123,6 +125,7 @@ class BTextFormField extends StatelessWidget {
         readOnly: readOnly,
         style: textStyle,
         obscureText: obscureText,
+        textAlign: textAlign,
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: hintStyle,
