@@ -36,10 +36,12 @@ class BButton extends BBaseButton {
           ),
           const SizedBox(width: 4),
         ],
-        Text(
-          label,
-          textAlign: TextAlign.center,
-          style: textStyleResolver(),
+        Flexible(
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: textStyleResolver(),
+          ),
         ),
       ],
     );
