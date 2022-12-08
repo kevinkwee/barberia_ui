@@ -17,11 +17,13 @@ class BButton extends BBaseButton {
     super.size = BWidgetSize.large,
     super.variant = BButtonVariant.primary,
     super.elevation = 0,
+    this.textAlign = TextAlign.center,
   });
 
   final String label;
   final bool dense;
   final IconData? icon;
+  final TextAlign textAlign;
 
   @override
   Widget buildChild(contentColorResolver, textStyleResolver, iconSizeResolver) {
@@ -39,7 +41,7 @@ class BButton extends BBaseButton {
         Flexible(
           child: Text(
             label,
-            textAlign: TextAlign.center,
+            textAlign: textAlign,
             style: textStyleResolver(),
           ),
         ),
