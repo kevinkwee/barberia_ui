@@ -145,7 +145,7 @@ class BTextFormField extends StatelessWidget {
             color: BColors.negative,
             fontWeight: FontWeight.w700,
           ),
-          contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: maxLines > 1 ? 4 : 0),
           constraints: BoxConstraints(
             minHeight: size.value,
             // maxHeight: maxLines == 1 ? size.value : double.infinity,
